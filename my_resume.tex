@@ -1,0 +1,281 @@
+%%%%
+% MTecknology's Resume
+%%%%
+% Author: Michael Lustfield
+% License: CC-BY-4
+% - https://creativecommons.org/licenses/by/4.0/legalcode.txt
+%%%%
+
+\documentclass[letterpaper,10pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%
+%% BEGIN_FILE: mteck.sty
+%% NOTE: Everything between here and END_FILE can
+%% be relocated to "mteck.sty" and then included with:
+%\usepackage{mteck}
+
+% Dependencies
+% NOTE: Some packages (lastpage, hyperref) require second build!
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{bookmark}
+\usepackage{lastpage}
+
+% Sans-Serif
+%\usepackage[sfdefault]{FiraSans}
+%\usepackage[sfdefault]{roboto}
+%\usepackage[sfdefault]{noto-sans}
+%\usepackage[default]{sourcesanspro}
+
+% Serif
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+
+% Colors
+% Use with \color{Name}
+% Can wrap entire heading with {\color{accent} [...] }
+\usepackage{xcolor}
+\definecolor{accentTitle}{HTML}{0e6e55}
+\definecolor{accentText}{HTML}{0e6e55}
+\definecolor{accentLine}{HTML}{a16f0b}
+
+% Misc. Options
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+
+% Adjust Margins
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\footskip}{3.7pt}
+\raggedbottom
+\raggedright
+
+% ATS Readability
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+%-----------------%
+% Custom Commands %
+%-----------------%
+
+% Centered title along with subtitle between HR
+% Usage: \documentTitle{Name}{Details}
+\newcommand{\documentTitle}[2]{
+  \begin{center}
+    {\Huge\color{accentTitle} #1}
+    \vspace{10pt}
+    {\color{accentLine} \hrule}
+    \vspace{2pt}
+    %{\footnotesize\color{accentTitle} #2}
+    \footnotesize{#2}
+    \vspace{2pt}
+    {\color{accentLine} \hrule}
+  \end{center}
+}
+
+% Create a footer with correct padding
+% Usage: \documentFooter{\thepage of X}
+\newcommand{\documentFooter}[1]{
+  \setlength{\footskip}{10.25pt}
+  \fancyfoot[C]{\footnotesize #1}
+}
+
+% Simple wrapper to set up page numbering
+% Usage: \numberedPages
+% WARNING: Must run pdflatex twice!
+\newcommand{\numberedPages}{
+  \documentFooter{\thepage/\pageref{LastPage}}
+}
+
+% Section heading with horizontal rule
+% Usage: \section{Title}
+\titleformat{\section}{
+  \vspace{-5pt}
+  \color{accentText}
+  \raggedright\large\bfseries
+}{}{0em}{}[\color{accentLine}\titlerule]
+
+% Section heading with separator and content on same line
+% Usage: \tinysection{Title}
+\newcommand{\tinysection}[1]{
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}
+  {\large{\bfseries\color{accentText}#1} {\color{accentLine} |}}
+}
+
+% Indented line with arguments left/right aligned in document
+% Usage: \heading{Left}{Right}
+\newcommand{\heading}[2]{
+  \hspace{10pt}#1\hfill#2\\
+}
+
+% Adds \textbf to \heading
+\newcommand{\headingBf}[2]{
+  \heading{\textbf{#1}}{\textbf{#2}}
+}
+
+% Adds \textit to \heading
+\newcommand{\headingIt}[2]{
+  \heading{\textit{#1}}{\textit{#2}}
+}
+
+% Template for itemized lists
+% Usage: \begin{resume_list} [items] \end{resume_list}
+\newenvironment{resume_list}{
+  \vspace{-7pt}
+  \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=30pt]
+}{
+  \end{itemize}
+  %\vspace{-2pt}
+}
+
+% Formats an item to use as an itemized title
+% Usage: \itemTitle{Title}
+\newcommand{\itemTitle}[1]{
+  \item[] \underline{#1}\vspace{4pt}
+}
+
+% Bullets used in itemized lists
+\renewcommand\labelitemi{--}
+
+%% END_FILE: mteck.sty
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+%===================%
+% Tang Sheng's RESUME %
+%===================%
+
+%\numberedPages % NOTE: lastpage requires a second build
+%\documentFooter{\thepage of 2} % Does similar without using lastpage
+\begin{document}
+
+  %---------%
+  % Heading %
+  %---------%
+
+  \documentTitle{Tang Sheng}{
+    % \textbf{Start\&End Date: 06/23/2025 - 09/23/2025} \\
+    \href{tel:8588294145}{
+      \raisebox{-0.05\height} TEL: 858-829-4145} ~ | ~
+    \href{tasheng@ucsd.edu}{
+      \raisebox{-0.15\height} Email: tasheng@ucsd.edu} ~ | ~
+     \href{https://www.linkedin.com/in/tang-sheng-3b5ab4319/}{
+       \raisebox{-0.15\height} Profile: linkedin.com/in/tang-sheng-3b5ab4319/} ~ | ~
+     \href{https://github.com/KyrieTangSheng}{
+       \raisebox{-0.15\height} Repo: github.com/KyrieTangSheng}
+}
+
+  
+  
+
+
+
+%-----------%
+  % Education %
+  %-----------%
+
+  \section{Education}
+
+  \headingBf{University of California, San Diego}{Sep 2024 - June 2026} 
+  \headingIt{Master of Science; Major: Computer Science; GPA: 4.0/4.0}{}
+  \headingIt{Relevant Courses: Recommendation Systems, Algorithm Design and Analysis, Statistical NLP, Database Implementation...}{}
+  \vspace{0.5em} % Adds a small vertical space
+
+  \headingBf{New York University}{Sep 2019 - May 2023} 
+  \headingIt{Bachelor of Science; Major: Computer Science; Overall GPA: 3.866/4.0; Major GPA: 3.971/4.0}{}
+  \headingIt{Relevant Courses: Distributed Systems, Software Engineering, NLP, Algorithms, Data Structure, Operating Systems.. }{}
+  \headingIt{Research: \textbf{Intent Clustering} of User Utterances from Task-Oriented Conversation, (\textbf{NLP; Deep Learning})}{}
+  %------------%
+  % Experience %
+  %------------%
+
+  \section{Professional Experience}
+  \headingBf{UrsaTech} {Nov 2024 - Present}
+  \headingIt{\textbf{Software Engineer Intern}}{San Francisco, CA}
+  \begin{resume_list}
+      \item Building \textbf{infrastructure} for this multimodal AI startup, enabling innovative solutions in AI education and manufacturing
+      \item Developed API endpoints using \textbf{Node.js }and\textbf{ Express.js} for an AI education platform, integrating \textbf{MySQL} for data management and \textbf{AWS S3} for object storage
+      \item Implemented real-time coding collaboration and auto-sync mechanisms using \textbf{WebSocket}, and caching with \textbf{Redis}
+      \item Enhanced LMS functionality within the \textbf{Python} \textbf{FastAPI} framework, optimizing backend processing
+  \end{resume_list}
+  \headingBf{FNZ Group}{Jul 2023 - Jun 2024}
+  \headingIt{\textbf{Software Engineer}}{London, UK}
+  \begin{resume_list}
+    \item Built scalable online trading service for fintech platforms with the \textbf{C\#} \textbf{.NET} framework and ensured system reliability
+    \item Designed and implemented \textbf{REST APIs} under \textbf{MVC} pattern, including controllers, business logic, and DTOs, for the initiation, pause, processing, and settlement of the entire regular investment function; developed underlying database schema and queries with Microsoft \textbf{SQL Server}
+    \item Implemented reliable inter-platform communication using \textbf{RabbitMQ} for data exchange between multiple applications
+    \item Optimized database schema, \textbf{indexing} strategies, and existing queries based on \textbf{execution plans} and I/O statistics; Completed data migration upon DB schema refactor; Improved overall query latency by over \textbf{30\%} during load testing
+    \item Integrated third party APIs with \textbf{JWT} Token authentication, ensuring seamless communication with external services
+  \end{resume_list}
+  \headingBf{Hello Transtech}{Sep 2022 - Nov 2022}
+  \headingIt{\textbf{Backend Engineer Intern}}{Shanghai, China}
+  \begin{resume_list}
+  \item Worked for a leading ride rental company in Asia, leveraging technology to provide sustainable transportation solutions
+  \item Contributed to the development of \textbf{microservices} for the e-bike rent business within \textbf{Java} \textbf{Spring} framework
+  \item Implemented controller and business logic for order processing, cancellation, and interception of invalid payments
+  \end{resume_list}
+
+  %----------------------------%
+  % Projects %
+  %----------------------------%
+  \section{Selected Projects}
+  \headingBf{FileSeek - AI-Powered Local Document Archivist}{Jan 2025 - Present}
+  \begin{resume_list}
+      \item Developed and published FileSeek, an \textbf{open-source}, AI-powered document archival and semantic search tool with natural language query support, available as a \textbf{Python PyPI package}
+      \item Implemented \textbf{vector-based} \textbf{semantic search} using \textbf{FAISS} for fast, offline document retrieval; Integrated AI-powered \textbf{OCR}, enhancing text extraction accuracy from images and scanned PDFs for improved document searchability
+      \item Improved data processing performance for large-scale datasets by leveraging \textbf{multithreading}
+  \end{resume_list}
+  % \headingBf{Stock Market Analyzer}{Nov 2024 - Present}
+  % \begin{resume_list}
+  %     \item Developed a \textbf{multi-threaded }stock analysis tool using \textbf{Haskell} to fetch and process stock price data in parallel.
+  %     \item Implemented \textbf{concurrent} API requests using Haskell's async library to efficiently retrieve multiple stock data points
+  %     \item Implemented caching and retry logic to optimize API performance and handle failures
+  % \end{resume_list}
+  
+  \headingBf{SupreAssistant - Lifelong AI Personal Assistant}{Aug 2024 - Present}
+  \begin{resume_list}
+      \item Developed an \textbf{AI Agent} to manage schedules and notes, enhancing productivity through AI-powered features
+      \item Integrated \textbf{LLMs} \textbf{with Retrieval-Augmented Generation} (\textbf{RAG}) and prompt engineering using \textbf{LangChain}, improving chatbot accuracy and data processing with \textbf{JSON Structured Output}
+      \item Developed a full-stack application using \textbf{TypeScript}, building the frontend with \textbf{React} and the backend with \textbf{Node.js} and \textbf{Express}; Used \textbf{SQLite} as the database, and containerized the application with \textbf{Docker}
+  \end{resume_list}
+  % \headingBf{Web App “EasyRun”}{Oct 2022 - Dec 2022}
+  % \begin{resume_list}
+  %   \item Created an App named “EasyRun” to offer and share information about graduate education programs
+  %   \item Used Java \textbf{Spring Boot} to build the server from scratch and create RESTful APIs
+  %   \item Designed database schema, and used \textbf{PostgreSQL} for data storage and management
+  %   \item Practiced version control with \textbf{Maven} and deployed application with \textbf{Aliyun}
+  % \end{resume_list}
+  
+  
+  %--------%
+  % Skills %
+  %--------%
+
+  \section{Skills}
+
+
+    \begin{itemize}[itemsep=-2px, leftmargin=35pt, align=left]
+        \item[\textbf{Languages}] Python, TypeScript, Java, C\#, Haskell, C/C++, SQL, JavaScript, HTML, CSS, etc.
+
+\item[\textbf{Frameworks}] PyTorch, Node.js, Express.js, React, React Native, Spring Boot, .NET, etc.
+
+\item[\textbf{Tools}] Docker, Redis, Hadoop, Linux, Git, Kubernetes, Deep Learning, Machine Learning, CI/CD pipeline, Postgres, erc.
+
+    \end{itemize}
+\end{document}
