@@ -17,7 +17,10 @@ const About = () => {
           Hi, I'm Tang Sheng, a software engineer passionate about AI, backend systems, and full-stack development. 
           </p>
           <p>
-          I’m currently pursuing my Master’s in Computer Science at UC San Diego, with experience in infrastructure and scalable system design.
+          I’m pursuing my Master’s in Computer Science at UC San Diego, with a mixed background in scalable infra&system and AI.
+          </p>
+          <p>
+          Recently, I've been interning at TikTok, where I worked on engineering strategies for the Ads Targeting team. I am working on various projects such as high-value audience retargeting and LLM-powered tag expansion.
           </p>
           <p>
           I'm a problem solver and a quick learner. I'm always eager to take on new challenges. I'm obsessed with building innovative solutions. 

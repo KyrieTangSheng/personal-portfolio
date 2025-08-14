@@ -5,6 +5,7 @@ const skills = [
   {
     category: "Languages",
     items: [
+      { name: "Golang", level: 95 },
       { name: "Python", level: 90 },
       { name: "TypeScript", level: 85 },
       { name: "Java", level: 85 },
@@ -19,6 +20,8 @@ const skills = [
     category: "Frameworks",
     items: [
       { name: "PyTorch", level: 85 },
+      { name: "gRPC", level: 85 },
+      { name: "thrift", level: 85 },
       { name: "Node.js", level: 90 },
       { name: "Express.js", level: 85 },
       { name: "React", level: 85 },
@@ -32,6 +35,9 @@ const skills = [
     category: "Tools",
     items: [
       { name: "Docker", level: 85 },
+      { name: "Apache Spark", level: 85 },
+      { name: "Cron", level: 85 },
+      { name: "LLM", level: 85 },
       { name: "NoSQL Databases", level: 80 },
       { name: "Relational Databases", level: 85 },
       { name: "Linux", level: 85 },

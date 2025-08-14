@@ -49,6 +49,22 @@ const sortTechnologies = (technologies: string[]) => {
 
 const experiences: Experience[] = [
   {
+    company: "TikTok",
+    companyUrl: "https://www.tiktok.com/explore",
+    companyDescription: "Social Media",
+    role: "Software Engineer Intern",
+    period: "Jun 2025 - Sept 2025",
+    location: "San Jose, CA",
+    description: [
+        "Architected a retargeting strategy as core component of dynamic targeting framework across 8M+ advertisements, reducing cost per acquisition by 7% compared to broad targeting via budget-split experimentation",
+        "Developed and integrated LLM tag expansion as a strategy within multi-arm bandit system, enabling automated generation of enhanced ad tags for improved audience matching and increasing advertiser value by 1.24%",
+        "Developed new RPC service for more configurable and safer targeting strategy injection to avoid injection conflicts"
+    ],
+    technologies: sortTechnologies([
+      "Golang", "Apache Spark", "Kubernetes", "Cron", "RPC", "Multi-Arm Bandit", "LLM"
+    ])
+  },
+  {
     company: "UrsaTech",
     companyUrl: "https://ursatech.com",
     companyDescription: "Multimodal AI",
@@ -56,10 +72,8 @@ const experiences: Experience[] = [
     period: "Nov 2024 - Feb 2025",
     location: "San Francisco, CA",
     description: [
-        "Building infrastructure for this multimodal AI startup, enabling innovative solutions in AI education and manufacturing",
-        "Built a prototype ML experimentation platform, allowing users to submit scripts and run distributed workloads on fractioned GPUs using Kubernetes Pods for resource allocation and Docker for job execution",
-        "Developed API endpoints using Node.js and Express.js for an AI education platform, integrating MySQL for data management and AWS S3 for object storage; Enhanced LMS functionality within the Python FastAPI framework",
-        "Implemented real-time coding collaboration and auto-sync mechanisms using WebSocket, and caching with Redis"
+      "Architected foundational ML infrastructure from scratch, building prototype experimentation platform with Kubernetes-based GPU resource allocation for AI model training workflows",
+      "Developed core collaborative coding infrastructure with real-time synchronization capabilities, establishing the technical foundation for the startup’s educational programming environment"
     ],
     technologies: sortTechnologies([
       "Python", "Node.js", "Express.js", "FastAPI", "MySQL", "AWS S3", "WebSocket", "Redis"

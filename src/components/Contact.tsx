@@ -32,11 +32,11 @@ const Contact = () => {
             </a>
             
             <a 
-              href="mailto:tangsheng001018@gmail.com" 
+              href="mailto:tangsheng909@gmail.com" 
               className={`${styles.socialLink} ${styles.email}`}
             >
               <span className={styles.linkText}>Email</span>
-              <span className={styles.linkDescription}>tangsheng001018@gmail.com</span>
+              <span className={styles.linkDescription}>tangsheng909@gmail.com</span>
             </a>
           </div>
         
